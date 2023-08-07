@@ -5,8 +5,8 @@ import './App.css';
 
 const App = () => {
   return (
-    <div className="main" class="container mt-5">
-      <h1>People Showcase</h1>
+    <div class="lead">
+      <h1>Our Reviews</h1>
       <PersonCarousel />
     </div>
   );
