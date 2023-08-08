@@ -48,6 +48,14 @@ const PersonCarousel = () => {
     setCurrentIndex((currentIndex + 1) % peopleData.length);
   };
 
+  const randomize = () => {
+    const randomIndex = Math.floor(Math.random() * peopleData.length);
+    setCurrentIndex(randomIndex);
+  };
+
+
+
+
   const person = peopleData[currentIndex];
 
   useEffect(() => {
@@ -67,17 +75,24 @@ const PersonCarousel = () => {
   },); 
   return (
     <div className="person-carousel">
-      <div className="arrow left-arrow" onClick={prevPerson}>
-        &lt;
-      </div>
+      
       <div className="person-card">
         <img src={person.image} alt="Person" className="person-image" />
         <h2 className="person-name">{person.name}</h2>
         <p className="person-job">{person.job}</p>
         <p className="person-text">{person.text}</p>
       </div>
-      <div className="arrow right-arrow" onClick={nextPerson}>
+      <div className='isrebi'>
+      <div className="arrowleft-arrow" onClick={prevPerson}>
+        &lt;
+      </div>
+      <div className="arrowright-arrow" onClick={nextPerson}>
         &gt;
+      </div>
+      </div>
+      <div className='knopkis-gacentreba'>
+        <button className='knopka' onClick={randomize}>Suprise Me</button >
+
       </div>
     </div>
     
